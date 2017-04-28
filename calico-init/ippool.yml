@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ipPool
+metadata:
+  cidr: $subnet
+spec:
+  nat-outgoing: true
+  disabled: false
