@@ -12,7 +12,7 @@ SUBNET=${SUBNET:-192.168.0.0/16}
 # Need to use lowercase
 sed -i "s|\$subnet|$SUBNET|g" /etc/calico-init/ippool.yml
 
-./calicoctl replace -f /etc/calico-init/ippool.yml
-./calicoctl replace -f /etc/calico-init/profile.yml
+./calicoctl apply -f /etc/calico-init/ippool.yml
+./calicoctl apply -f /etc/calico-init/profile.yml
 
 /bin/sh
